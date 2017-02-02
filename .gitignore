@@ -1,0 +1,10 @@
+*.pyc
+*.sqlite3
+venv
+.idea/
+web-application/main/settings_local.py
+web-application/heartbeat_staticfiles/static/*
+web-application/reports/
+web-application/media/
+web-application/logs-log.txt*
+web-application/static/*
