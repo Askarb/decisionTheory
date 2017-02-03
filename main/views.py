@@ -6,17 +6,16 @@ from django.shortcuts import render, HttpResponse
 
 def index(request):
     context = {}
-    template = loader.get_template('index.html')
+    template = loader.get_template('main/index.html')
     return wp(request)
-    return HttpResponse(template.render(context, request))
+    #return HttpResponse(template.render(context, request))
 
 
 def wp(request):
-
     context = {
         'wp': core.wp()
     }
-    template = loader.get_template('wp.html')
+    template = loader.get_template('main/wp.html')
     return HttpResponse(template.render(context, request))
 
 
@@ -25,7 +24,7 @@ def emv(request):
         'emv': core.emv(),
         'max_emv': core.emv_max()
     }
-    template = loader.get_template('emv.html')
+    template = loader.get_template('main/emv.html')
     return HttpResponse(template.render(context, request))
 
 
@@ -33,7 +32,7 @@ def report_emv(request):
     context = core.emv_report()
     context['wp'] = core.wp()
     context['probability'] = core.check_propability()
-    template = loader.get_template('reportEMV.html')
+    template = loader.get_template('main/reportEMV.html')
     return HttpResponse(template.render(context, request))
 
 
@@ -42,7 +41,7 @@ def cp_max(request):
         'cp_max': core.cp_max()
     }
 
-    template = loader.get_template('cp_max.html')
+    template = loader.get_template('main/cp_max.html')
     return HttpResponse(template.render(context, request))
 
 
@@ -51,7 +50,7 @@ def col(request):
     context = {
         'col': core.col()
     }
-    template = loader.get_template('col.html')
+    template = loader.get_template('main/col.html')
     return HttpResponse(template.render(context, request))
 
 
@@ -60,7 +59,7 @@ def wol(request):
     context = {
         'wol': core.col()
     }
-    template = loader.get_template('wol.html')
+    template = loader.get_template('main/wol.html')
     return HttpResponse(template.render(context, request))
 
 
@@ -70,7 +69,7 @@ def eol(request):
         'eol': core.eol(),
         'min_eol': core.min_eol()
     }
-    template = loader.get_template('eol.html')
+    template = loader.get_template('main/eol.html')
     return HttpResponse(template.render(context, request))
 
 
@@ -78,6 +77,6 @@ def report_eol(request):
     context = core.eol_report()
     context['wp'] = core.wp()
     context['probability'] = core.check_propability()
-    template = loader.get_template('reportEOL.html')
+    template = loader.get_template('main/reportEOL.html')
     return HttpResponse(template.render(context, request))
 

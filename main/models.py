@@ -5,13 +5,15 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class ActionList(models.Model):
-    action = models.CharField(max_length=255)
+    action = models.CharField(max_length=255, unique=True)
 
     def __str__(self):
         return self.action
 
 
 class EventList(models.Model):
+    class Meta:
+        unique_together = ('event', 'probability')
     event = models.CharField(max_length=255)
     probability = models.FloatField(validators=[MinValueValidator(0), MaxValueValidator(1)], default=1)
 
@@ -30,7 +32,10 @@ class ConditionalProfit(models.Model):
 
 @receiver(post_save, sender=EventList, dispatch_uid="update_stock_count")
 def update_Event(sender, instance, **kwargs):
-    print(instance, kwargs)
+    pass
+    # for i in EventList.objects.all():
+    #     ConditionalProfit.objects.filter(event=i).update(probability=i.probability)
+
     #updateConditionalProfit()
 
 
@@ -49,3 +54,6 @@ def update_Action(sender, instance, **kwargs):
 #             CP = ConditionalProfit(action=j, event=i, probability=i.probability, conditionalProfit=0)
 #             CP.save()
 #             print(i,j, i.probability)
+
+
+
