@@ -1,0 +1,44 @@
+body{
+    background: url('/static/images/bg.jpg');
+}
+h2{
+    padding: 20px;
+}
+h3{
+    padding: 30px;
+    font-size: 30px;
+}
+.container{
+    width: 1200px;
+    margin: 20px auto 0;
+    background-color: #999999;
+    padding: 10px 20px 50px;
+}
+
+nav a{
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+table{
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+table, td, th{
+    border: 2px solid #0b2c89;
+    border-collapse: collapse;
+    padding: 10px 20px;
+
+}
+
+p.report{
+    padding: 20px 20px 40px;
+    width: 900px;
+    margin: 0 auto 20px;
+    font-size:20px;
+    background-color: #fafafa;
+}
+.error{
+    color: red;
+}

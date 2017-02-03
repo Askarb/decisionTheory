@@ -1,11 +1,170 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Decision theory</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-submenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap-submenu.min.js' %}"></script>
 </head>
 <body>
-    <H1>Decision theory</H1>
-    {% block index %}{% endblock %}
+    <div class="container">
+        <header>
+            <H1>Decision theory</H1>
+            <nav class="navbar navbar-default">
+{#              <div class="navbar-header">#}
+{#                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">#}
+{#                  <span class="sr-only">Toggle navigation</span>#}
+{#                  <span class="icon-bar"></span>#}
+{#                  <span class="icon-bar"></span>#}
+{#                  <span class="icon-bar"></span>#}
+{#                </button>#}
+{##}
+{#                <a class="navbar-brand">Decision theory</a>#}
+{#              </div>#}
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a tabindex="0" data-toggle="dropdown" data-submenu="" aria-expanded="false">
+                              Lab1: wheel of Fortune<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a tabindex="0">List of </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a tabindex="0" href="/admin/main/actionlist/" target="_blank">List of Action</a></li>
+                                        <li><a tabindex="0" href="/admin/main/eventlist/" target="_blank">List of Event</a></li>
+                                    </ul>
+                                </li>
+                                <li><a tabindex="0" href="/admin/main/conditionalprofit/" target="_blank">Conditional profit</a></li>
+                                <li class="divider"></li>
+                                <li><a tabindex="0" href="/wp">Weighted profit</a></li>
+                                <li><a tabindex="0" href="/emv">Средняя ожидаемая прибль</a></li>
+                                <li><a tabindex="0" href="/solutionemv">Solution of the problem</a></li>
+                                <li class="divider"></li>
+                                <li><a tabindex="0" href="/cp_max">Максимальная условная прибль</a></li>
+                                <li><a tabindex="0" href="/col">COL Условные потери</a></li>
+                                <li><a tabindex="0" href="/wol">WOL Взвешанные потери </a></li>
+                                <li><a tabindex="0" href="/eol">EOL Средне ожидаеые потери</a></li>
+                                <li><a tabindex="0" href="/solutioneol">SolutionOfTaskByEOL</a></li>
+                            </ul>
+                      </li>
+                  <li class="dropdown">
+                    <a tabindex="0" data-toggle="dropdown" data-submenu="">
+                      Dropdown 2<span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                      <a tabindex="0">Action</a>
+
+                      <ul class="dropdown-menu">
+                        <li><a tabindex="0">Sub action</a></li>
+                        <li class="dropdown-submenu">
+                          <a tabindex="0">Another sub action</a>
+
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="0">Sub action</a></li>
+                            <li><a tabindex="0">Another sub action</a></li>
+                            <li><a tabindex="0">Something else here</a></li>
+                          </ul>
+                        </li>
+                        <li><a tabindex="0">Something else here</a></li>
+                        <li class="disabled"><a tabindex="-1">Disabled action</a></li>
+                        <li class="dropdown-submenu">
+                          <a tabindex="0">Another action</a>
+
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="0">Sub action</a></li>
+                            <li><a tabindex="0">Another sub action</a></li>
+                            <li><a tabindex="0">Something else here</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                        </li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li class="dropdown-submenu">
+                          <a tabindex="0">Another action</a>
+
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="0">Sub action</a></li>
+                            <li><a tabindex="0">Another sub action</a></li>
+                            <li><a tabindex="0">Something else here</a></li>
+                          </ul>
+                        </li>
+                        <li><a tabindex="0">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a tabindex="0">Separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                    <a tabindex="0" data-toggle="dropdown" data-submenu="">
+                      Dropdown 3<span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                      <a tabindex="0">Action</a>
+
+                      <ul class="dropdown-menu">
+                        <li><a tabindex="0">Sub action</a></li>
+                        <li class="dropdown-submenu">
+                          <a tabindex="0">Another sub action</a>
+
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="0">Sub action</a></li>
+                            <li><a tabindex="0">Another sub action</a></li>
+                            <li><a tabindex="0">Something else here</a></li>
+                          </ul>
+                        </li>
+                        <li><a tabindex="0">Something else here</a></li>
+                        <li class="disabled"><a tabindex="-1">Disabled action</a></li>
+                        <li class="dropdown-submenu">
+                          <a tabindex="0">Another action</a>
+
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="0">Sub action</a></li>
+                            <li><a tabindex="0">Another sub action</a></li>
+                            <li><a tabindex="0">Something else here</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-header">Dropdown header</li>
+                    <li class="dropdown-submenu">
+                      <a tabindex="0">Another action</a>
+
+                      <ul class="dropdown-menu">
+                        <li><a tabindex="0">Sub action</a></li>
+                        <li><a tabindex="0">Another sub action</a></li>
+                        <li><a tabindex="0">Something else here</a></li>
+                      </ul>
+                    </li>
+                    <li><a tabindex="0">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a tabindex="0">Separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </header>
+        {% block index %}{% endblock %}
+        {% block wp %}{% endblock %}
+        {% block reportEMV %}{% endblock %}
+    </div>
+    <script>
+        $('[data-submenu]').submenupicker();
+    </script>
 </body>
 </html>
