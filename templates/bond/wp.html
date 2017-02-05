@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block wp %}
+    <h2>Weighted profit</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Event</th>
+                <th>Probability</th>
+                <th>Price</th>
+                <th>Rate</th>
+                <th>WP</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for foo in wp %}
+
+            <tr>
+                <td>{{ foo.action }}</td>
+                <td>{{ foo.event }}</td>
+                <td>{{ foo.probability }}</td>
+                <td>{{ foo.price }}</td>
+                <td>{{ foo.rate }}</td>
+                <td>{{ foo.wp }}</td>
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

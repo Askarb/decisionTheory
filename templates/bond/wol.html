@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block wp %}
+    <h2>Взвешанные потери при данной комбинации</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Event</th>
+                <th>Probability</th>
+                <th>Price</th>
+                <th>Rate</th>
+                <th>conditional Profit</th>
+                <th>COL</th>
+                <th>WOL</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for foo in wol %}
+
+            <tr>
+                <td>{{ foo.action }}</td>
+                <td>{{ foo.event }}</td>
+                <td>{{ foo.probability }}</td>
+                <td>{{ foo.price }}</td>
+                <td>{{ foo.rate }}</td>
+                <td>{{ foo.conditionalProfit }}</td>
+                <td>{{ foo.col }}</td>
+                <td>{{ foo.wol }}</td>
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

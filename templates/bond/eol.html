@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block wp %}
+    <h2>Средне ожидаеые потери</h2>
+    <h3>Min EOL: <b>{{ min_eol }}</b></h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Действие</th>
+                <th>Средняя ожидаемые потери</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for foo in eol %}
+            <tr>
+                {% for i in foo %}
+                    <td>{{ i }} $</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
