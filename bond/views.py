@@ -33,7 +33,6 @@ def cp_max(request):
     context = {
         'cp_max': core.cp_max()
     }
-
     template = loader.get_template('bond/cp_max.html')
     return HttpResponse(template.render(context, request))
 
