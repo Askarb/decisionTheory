@@ -4,7 +4,7 @@ from bond.models import *
 
 def update_profit(modeladmin, request, queryset):
     for i in queryset:
-        i.conditionalProfit = i.rate * ((i.price + 100)/100)
+        i.conditionalProfit = round(i.rate * ((i.price + 100)/100), 2)
         i.save()
 update_profit.short_description = "Update profit"
 

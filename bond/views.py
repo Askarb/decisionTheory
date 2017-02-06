@@ -5,7 +5,6 @@ from django.shortcuts import render, HttpResponse
 
 
 def wp(request):
-    print('wr works')
     context = {
         'wp': core.wp()
     }
