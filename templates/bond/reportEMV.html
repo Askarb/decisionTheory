@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% block reportEMV %}
     {% if probability != 1 %}
-        <h1 class="error">Сумма вероятностей неравен 1</h1>
+        <h1 class="error">
+            Сумма вероятностей неравен 1, События образуют не полную группу!!!
+            <br>Измените значение вероятности, чтобы в сумме была равна 1
+            <br> <span>Вы можете изменить <a
+                href="/admin/bond/eventlist/">по этой ссылке</a></span></h1>
     {% else %}
         <h3>Отчет: Рекомендация для нашего клиента</h3>
         <p class = 'report'> Моему клиенту рекомендуется выбрать действие <b>{{ action }} </b>
@@ -15,7 +19,7 @@
                     <th>Action</th>
                     <th>Event</th>
                     <th>Probability</th>
-                    <th>Price</th>
+                    <th>Nominal price</th>
                     <th>Procent rate</th>
                 </tr>
             </thead>
