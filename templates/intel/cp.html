@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block wp %}
+    <h2>Conditional profit</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Event</th>
+                <th>Процент брака по делу</th>
+                <th>Probability</th>
+                <th>Процент брака по контракту</th>
+                <th>CP</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for foo in cp %}
+
+            <tr>
+                <td>{{ foo.action }}</td>
+                <td>{{ foo.event }}</td>
+                <td>{{ foo.percent }} %</td>
+                <td>{{ foo.probability }}</td>
+                <td>{{ foo.quality }} %</td>
+                <td>{{ foo.conditionalProfit }}</td>
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap-submenu.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
     <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.js' %}"></script>
     <script src="{% static 'js/bootstrap-submenu.min.js' %}"></script>
-</head>d
+</head>
 <body>
     <div class="container">
         <header>
@@ -113,6 +113,7 @@
                             </ul>
                         </li>
 
+
                         <li class="dropdown">
                             <a tabindex="0" data-toggle="dropdown" data-submenu="">
                                 Lab3: Rent computer<span class="caret"></span>
@@ -136,6 +137,33 @@
                                 <li><a tabindex="0" href="/computer/wol">WOL Взвешанные потери </a></li>
                                 <li><a tabindex="0" href="/computer/eol">EOL Средне ожидаеые потери</a></li>
                                 <li><a tabindex="0" href="/computer/solutioneol">SolutionOfTaskByEOL</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="dropdown">
+                            <a tabindex="0" data-toggle="dropdown" data-submenu="">
+                                Lab8: Intel<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a tabindex="0">List of </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a tabindex="0" href="/admin/intel/actionlist/" target="_blank">List of Action</a></li>
+                                        <li><a tabindex="0" href="/admin/intel/eventlist/" target="_blank">List of Event</a></li>
+                                    </ul>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a tabindex="0" href="/intel/cp">Conditional profit</a></li>
+                                <li><a tabindex="0" href="/intel/wp">Weighted profit</a></li>
+                                <li><a tabindex="0" href="/intel/emv">Средняя ожидаемая прибль</a></li>
+                                <li><a tabindex="0" href="/intel/solutionemv">Solution of the problem</a></li>
+                                <li class="divider"></li>
+                                <li><a tabindex="0" href="/intel/cp_max">Максимальная условная прибль</a></li>
+                                <li><a tabindex="0" href="/intel/col">COL Условные потери</a></li>
+                                <li><a tabindex="0" href="/intel/wol">WOL Взвешанные потери </a></li>
+                                <li><a tabindex="0" href="/intel/eol">EOL Средне ожидаеые потери</a></li>
+                                <li><a tabindex="0" href="/intel/solutioneol">SolutionOfTaskByEOL</a></li>
                             </ul>
                         </li>
 

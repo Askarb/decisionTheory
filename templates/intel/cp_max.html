@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block wp %}
+    <h2>Максимальная условная прибль</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>CP at favorable action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for foo in cp_max %}
+            <tr>
+                <td>{{ foo.0 }}</td>
+                <td>{{ foo.1 }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
