@@ -25,7 +25,8 @@ update_cp.short_description = "Update conditional profit table"
 
 class EventListAdmin(admin.ModelAdmin):
     actions = [update_cp,]
-    list_display = ('event', 'percent', 'probability')
+    fields = ('percent', 'probability')
+    list_display = ('percent', 'probability')
 
 admin.site.register(EventList, EventListAdmin)
 

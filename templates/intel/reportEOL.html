@@ -13,12 +13,12 @@
             <i>{Это значит, что минимальное
             среднее ожидаемой значение процента потерь составит <b>{{ cp }} $</b> на на каждое решение задачи }</i></p>
 
+
         <table>
             <thead>
                 <tr>
                     <th>Action</th>
-                    <th>Event</th>
-                    <th>Процент брака по делу</th>
+                    <th>Event (Процент бракованных изделий)</th>
                     <th>Probability</th>
                     <th>Процент брака по контракту</th>
                     <th>CP</th>
@@ -29,8 +29,7 @@
 
                 <tr>
                     <td>{{ foo.action }}</td>
-                    <td>{{ foo.event }}</td>
-                    <td>{{ foo.percent }} %</td>
+                    <td>Процент брака по делу: {{ foo.event.percent }} %</td>
                     <td>{{ foo.probability }}</td>
                     <td>{{ foo.quality }} %</td>
                     <td>{{ foo.conditionalProfit }}</td>
