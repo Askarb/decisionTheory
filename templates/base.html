@@ -139,6 +139,33 @@
                             </ul>
                         </li>
 
+                        <li class="dropdown">
+                            <a tabindex="0" data-toggle="dropdown" data-submenu="">
+                                Lab5:Food<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a tabindex="0">List of </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a tabindex="0" href="/admin/food/actionlist/" target="_blank">List of Action</a></li>
+                                        <li><a tabindex="0" href="/admin/food/eventlist/" target="_blank">List of Event</a></li>
+                                    </ul>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a tabindex="0" href="/food/revenue">Revenue Cost</a></li>
+                                <li><a tabindex="0" href="/food/cp">Conditional profit</a></li>
+                                <li><a tabindex="0" href="/food/wp">Weighted profit</a></li>
+                                <li><a tabindex="0" href="/food/emv">Средняя ожидаемая прибль</a></li>
+                                <li><a tabindex="0" href="/food/solutionemv">Solution of the problem</a></li>
+                                <li class="divider"></li>
+                                <li><a tabindex="0" href="/food/cp_max">Максимальная условная прибль</a></li>
+                                <li><a tabindex="0" href="/food/col">COL Условные потери</a></li>
+                                <li><a tabindex="0" href="/food/wol">WOL Взвешанные потери </a></li>
+                                <li><a tabindex="0" href="/food/eol">EOL Средне ожидаеые потери</a></li>
+                                <li><a tabindex="0" href="/food/solutioneol">SolutionOfTaskByEOL</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -194,10 +221,12 @@
               </div>
             </nav>
         </header>
+
         {% block index %}{% endblock %}
         {% block wp %}{% endblock %}
         {% block reportEMV %}{% endblock %}
         {% block bond_index %}{% endblock %}
+        {% block revenue %}{% endblock %}
     </div>
     <script>
         $('[data-submenu]').submenupicker();

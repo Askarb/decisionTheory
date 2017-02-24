@@ -4,11 +4,13 @@ import main.urls
 import bond.urls
 import fund.urls
 import computer.urls
+import food.urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'bond/', include(bond.urls)),
     url(r'fund/', include(fund.urls)),
     url(r'computer/', include(computer.urls)),
+    url(r'food/', include(food.urls)),
     url(r'', include(main.urls)),
 ]

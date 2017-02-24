@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block wp %}
+    <h2>Условные потери при данной комбинации</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Event</th>
+                <th>Probability</th>
+                <th>CP $</th>
+                <th>COL</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for foo in col %}
+
+            <tr>
+                <td>{{ foo.action }}</td>
+                <td>{{ foo.event }}</td>
+                <td>{{ foo.probability }}</td>
+                <td>{{ foo.cp }} $</td>
+                <td>{{ foo.col }} $</td>
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

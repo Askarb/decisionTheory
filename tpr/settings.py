@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'bond',
     'fund',
     'computer',
+    'food',
 ]
 
 MIDDLEWARE = [
