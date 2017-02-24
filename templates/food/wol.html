@@ -7,23 +7,19 @@
                 <th>Action</th>
                 <th>Event</th>
                 <th>Probability</th>
-{#                <th>conditional Profit</th>#}
-                <th>COL</th>
                 <th>WOL</th>
             </tr>
         </thead>
         <tbody>
         {% for foo in wol %}
-
-            <tr>
-                <td>{{ foo.action }}</td>
-                <td>{{ foo.event }}</td>
-                <td>{{ foo.probability }}</td>
-{#                <td>{{ foo.conditionalProfit }}</td>#}
-                <td>{{ foo.col }}</td>
-                <td>{{ foo.wol }}</td>
-            </tr>
-
+            {% if foo.wol != 0 %}
+                <tr>
+                    <td>{{ foo.action }}</td>
+                    <td>{{ foo.event }}</td>
+                    <td>{{ foo.probability }}</td>
+                    <td>{{ foo.wol }}</td>
+                </tr>
+            {% endif %}
         {% endfor %}
         </tbody>
     </table>

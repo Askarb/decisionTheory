@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block map %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Svg Map - Kyrgyzstan</title>
+        <style>
+            #map {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #replay {
+                text-align: center;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            #replay img {
+                width: 40px;
+                height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="map"></div>
+
+        <div id="replay">
+            <img src="{% static 'images/replay.svg' %}" alt="">
+        </div>
+
+        <!-- Vendors -->
+        <script src="{% static 'js/vendor/jquery.js'%}"></script>
+        <script src="{% static 'js/vendor/snap.svg-min.js' %}"></script>
+        <script src="{% static 'js/vendor/TweenMax.min.js' %}"></script>
+
+        <!-- Main js -->
+        <script src="{% static 'js/main.js'%}"></script>
+
+        <script>
+
+        </script>
+    </body>
+    </html>
+{% endblock %}

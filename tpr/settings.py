@@ -14,6 +14,7 @@ SECRET_KEY = 'e_-zfa0texl@hw!&#c4mhf#=hm=-d_-84f@3ag_z9f+$1=lj+!'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '*'
 ]
 
 
@@ -113,7 +114,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")

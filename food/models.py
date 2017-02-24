@@ -11,7 +11,7 @@ class ActionList(models.Model):
 
 class EventList(models.Model):
     class Meta:
-        unique_together = ('event', 'probability')
+        unique_together = ('event', 'probability', 'action')
     event = models.CharField(max_length=255)
     action = models.ForeignKey(ActionList)
 

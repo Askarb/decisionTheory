@@ -2,16 +2,14 @@ from food.models import *
 
 
 def revenue():
-    res = ConditionalProfit.objects.all()
+    res = ConditionalProfit.objects.all().exclude(revenue=0, cost=0)
     for i in res:
         i.cp = round(i.cp, 3)
     return res
 
 
 def cp():
-    res = ConditionalProfit.objects.all()
-    for i in res:
-        i.cp = round(i.cp, 3)
+    res = ConditionalProfit.objects.all().exclude(revenue=0, cost=0)
     return res
 
 
@@ -59,7 +57,6 @@ def check_propability():
             if i.action == j:
                 s += i.probability
         if s != 1:
-            print (s)
             return False
     return True
 
@@ -78,13 +75,22 @@ def cp_max():
 
 
 def col():
-    res = cp()
+    res = ConditionalProfit.objects.all()
     for i in res:
         for j in cp_max():
             if str(j[0]) == str(i.event):
                 i.col = round(j[1]-i.cp, 3)
                 i.wol = round(i.col * i.probability, 3)
                 i.cp = round(i.cp, 3)
+    return res
+
+
+def wol():
+    res = ConditionalProfit.objects.all()
+    for i in res:
+        for j in cp_max():
+            if str(j[0]) == str(i.event):
+                i.wol = round(i.col * i.probability, 3)
     return res
 
 

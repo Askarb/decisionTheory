@@ -221,12 +221,13 @@
               </div>
             </nav>
         </header>
-
+    <h2><a href="{% static 'oly.docx' %}">Документ</a></h2>
         {% block index %}{% endblock %}
         {% block wp %}{% endblock %}
         {% block reportEMV %}{% endblock %}
         {% block bond_index %}{% endblock %}
         {% block revenue %}{% endblock %}
+        {% block map %}{% endblock %}
     </div>
     <script>
         $('[data-submenu]').submenupicker();

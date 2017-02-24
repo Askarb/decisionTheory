@@ -6,9 +6,8 @@ from django.shortcuts import render, HttpResponse
 
 def index(request):
     context = {}
-    template = loader.get_template('main/index.html')
-    return wp(request)
-    #return HttpResponse(template.render(context, request))
+    template = loader.get_template('svg-index.html')
+    return HttpResponse(template.render(context, request))
 
 
 def wp(request):
