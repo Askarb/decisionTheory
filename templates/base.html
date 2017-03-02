@@ -33,7 +33,7 @@
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
                             <a tabindex="0" data-toggle="dropdown" data-submenu="" aria-expanded="false">
-                              Lab1: wheel of Fortune<span class="caret"></span>
+                              Lab1: Fortune<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-submenu">
@@ -60,7 +60,7 @@
 
                         <li class="dropdown">
                             <a tabindex="0" data-toggle="dropdown" data-submenu="">
-                                Lab4: Облигация или Акция<span class="caret"></span>
+                                Lab4:Акция<span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu">
@@ -166,6 +166,34 @@
                             </ul>
                         </li>
 
+
+                        <li class="dropdown">
+                            <a tabindex="0" data-toggle="dropdown" data-submenu="">
+                                Lab12:Engine<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a tabindex="0">List of </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a tabindex="0" href="/admin/engine/actionlist/" target="_blank">List of Action</a></li>
+                                        <li><a tabindex="0" href="/admin/engine/eventlist/" target="_blank">List of Event</a></li>
+                                    </ul>
+                                </li>
+                                <li class="divider"></li>
+{#                                <li><a tabindex="0" href="/engine/revenue">Revenue Cost</a></li>#}
+                                <li><a tabindex="0" href="/engine/cp">Conditional profit</a></li>
+                                <li><a tabindex="0" href="/engine/wp">Weighted profit</a></li>
+                                <li><a tabindex="0" href="/engine/emv">Средняя ожидаемая прибль</a></li>
+                                <li><a tabindex="0" href="/engine/solutionemv">Solution of the problem</a></li>
+                                <li class="divider"></li>
+                                <li><a tabindex="0" href="/engine/cp_max">Максимальная условная прибль</a></li>
+                                <li><a tabindex="0" href="/engine/col">COL Условные потери</a></li>
+                                <li><a tabindex="0" href="/engine/wol">WOL Взвешанные потери </a></li>
+                                <li><a tabindex="0" href="/engine/eol">EOL Средне ожидаеые потери</a></li>
+                                <li><a tabindex="0" href="/engine/solutioneol">SolutionOfTaskByEOL</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -221,7 +249,6 @@
               </div>
             </nav>
         </header>
-    <h2><a href="{% static 'oly.docx' %}">Документ</a></h2>
         {% block index %}{% endblock %}
         {% block wp %}{% endblock %}
         {% block reportEMV %}{% endblock %}

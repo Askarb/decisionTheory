@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block wp %}
+    <h2>Взвешанные потери при данной комбинации</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Event</th>
+                <th>Probability</th>
+                <th>WOL</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for foo in wol %}
+            {% if foo.wol != 0 %}
+                <tr>
+                    <td>{{ foo.action }}</td>
+                    <td>{{ foo.event }}</td>
+                    <td>{{ foo.probability }}</td>
+                    <td>{{ foo.wol }}</td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
