@@ -6,6 +6,7 @@ import fund.urls
 import computer.urls
 import food.urls
 import engine.urls
+import intel.urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -14,5 +15,6 @@ urlpatterns = [
     url(r'computer/', include(computer.urls)),
     url(r'food/', include(food.urls)),
     url(r'engine/', include(engine.urls)),
+    url(r'intel/', include(intel.urls)),
     url(r'', include(main.urls)),
 ]
