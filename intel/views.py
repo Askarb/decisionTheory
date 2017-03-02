@@ -74,7 +74,7 @@ def eol(request):
 
 def report_eol(request):
     context = core.eol_report()
-    context['wp'] = core.cp()
+    context['wp'] = core.wp()
     context['probability'] = core.check_propability()
     template = loader.get_template('intel/reportEOL.html')
     return HttpResponse(template.render(context, request))

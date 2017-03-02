@@ -10,6 +10,8 @@ def wp():
     res = cp()
     for i in res:
         i.wp = round(i.conditionalProfit*i.probability, 3)
+        i.p = ActionList.objects.get(action=i.action).prize
+        i.f = ActionList.objects.get(action=i.action).fine
     return res
 
 

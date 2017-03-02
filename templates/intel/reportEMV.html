@@ -15,21 +15,28 @@
             <thead>
                 <tr>
                     <th>Action</th>
-                    <th>Event (Процент бракованных изделий)</th>
+                    <th>Event</th>
                     <th>Probability</th>
-                    <th>Процент брака по контракту</th>
-                    <th>CP</th>
+                    <th>Премия</th>
+                    <th>Штраф</th>
+                    <th>ПБК</th>
+                    <th>ПБД</th>
                 </tr>
             </thead>
             <tbody>
             {% for foo in wp %}
 
                 <tr>
-                    <td>{{ foo.action }}</td>
-                    <td>Процент брака по делу: {{ foo.event.percent }} %</td>
+                    <td>{{ foo.action }},
+                        с некачественным изделием не выше <b>{{ foo.quality }}%</b>,
+                        с премией <b>{{ foo.p }}$</b>,
+                        и со штрафом в <b>{{ foo.f }}$</b></td>
+                    <td>Процент брака по делу: <b>{{ foo.event.percent }} %</b>, с вероятностью <b>{{ foo.probability }}</b></td>
                     <td>{{ foo.probability }}</td>
-                    <td>{{ foo.quality }} %</td>
-                    <td>{{ foo.conditionalProfit }}</td>
+                    <td>{{ foo.p }}</td>
+                    <td>{{ foo.f }}</td>
+                    <td><b><b>{{ foo.quality }}%</b></b></td>
+                    <td><b>{{ foo.event.percent }} %</b></td>
                 </tr>
 
             {% endfor %}
