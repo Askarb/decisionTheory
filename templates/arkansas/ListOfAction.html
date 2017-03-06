@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block wp %}
+    <h2>List of action</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Затраты на расширения</th>
+                <th>Затраты на строительство</th>
+                <th>Количетво лет до расширения</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for foo in actions %}
+
+            <tr>
+                {% if foo.year != 0 %}
+                    <td>{{ foo.action }}, и расширить через {{ foo.year }} года</td>
+                {% else %}
+                    <td>{{ foo.action }}</td>
+                {% endif %}
+                <td>{{ foo.costEx }}$</td>
+
+                <td>{{ foo.costBuild }}$</td>
+                <td>{{ foo.year }}</td>
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

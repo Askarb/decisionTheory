@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block wp %}
+    <h2>EMV Средняя ожидаемая прибль</h2>
+    <h3>EMV_max: <b>{{ max_emv }}</b></h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Действие</th>
+                <th>Средняя ожидаемая прибль</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for foo in emv %}
+            <tr>
+                {% for i in foo %}
+                    <td>{{ i }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

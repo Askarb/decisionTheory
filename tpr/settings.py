@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'food',
     'engine',
     'intel',
+    'arkansas',
 ]
 
 MIDDLEWARE = [

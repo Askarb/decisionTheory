@@ -7,6 +7,7 @@ import computer.urls
 import food.urls
 import engine.urls
 import intel.urls
+import arkansas.urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -16,5 +17,6 @@ urlpatterns = [
     url(r'food/', include(food.urls)),
     url(r'engine/', include(engine.urls)),
     url(r'intel/', include(intel.urls)),
+    url(r'arkansas/', include(arkansas.urls)),
     url(r'', include(main.urls)),
 ]
